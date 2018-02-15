@@ -18,10 +18,10 @@ class URL
      * @param array  &$parameters The resulting GET parameters as a mapped array
      */
     final public static function Extract( string $url,
-                                          string &$protocol   = '',
-                                          string &$domain     = '',
-                                          string &$path       = '',
-                                          array  &$parameters = [] )
+                                                 &$protocol   = '',
+                                                 &$domain     = '',
+                                                 &$path       = '',
+                                                 &$parameters = [] )
     {
         
         // Exit. Bad URL.
@@ -29,6 +29,12 @@ class URL
         if ( '' == $url ) {
             return;
         }
+        
+        // Set variables
+        $protocol   = '';
+        $domain     = '';
+        $path       = '';
+        $parameters = [];
         
         // Extract URL pieces
         $pieces   = explode( '/', $url );
@@ -41,7 +47,6 @@ class URL
         $path     = '/' . $pieces[ 0 ];
         
         // Build URL parameters mapped array
-        $parameters = [];
         if ( array_key_exists( 1, $pieces )) {
             $pieces = explode( '&', $pieces[ 1 ] );
             foreach ( $pieces as $piece ) {
