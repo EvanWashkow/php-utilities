@@ -4,7 +4,7 @@ namespace PHP;
 /**
  * Defines a helper utility for URLs
  */
-class URLs
+class URL
 {
     
     /**
