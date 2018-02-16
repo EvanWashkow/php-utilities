@@ -1,10 +1,10 @@
 {
     "name":        "evanwashkow/php-utilities",
     "description": "Foundational shared utilities for PHP",
-    "version":     "0.1.0",
+    "version":     "0.1.1",
     "autoload": {
         "psr-4": {
-            "PHP\\": "src/PHP/"
+            "PHP\\": "PHP/"
         }
     },
     "require": {
